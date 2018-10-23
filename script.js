@@ -1,5 +1,29 @@
 //This module takes care of the the data manipulation
-var budgetController = (function() {})();
+var budgetController = (function() {
+  //Creating the data model for expenses
+  var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;
+  };
+  //Creating the data model for incomes
+  var Income = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;
+  };
+
+  var data = {
+    allItems: {
+      exp: [],
+      inc: []
+    },
+    totals: {
+      exp: 0,
+      inc: 0
+    }
+  };
+})();
 
 //This module takes care of the user interface
 var UIController = (function() {
